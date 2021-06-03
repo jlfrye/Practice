@@ -1,6 +1,6 @@
 Detect_water <- function(x) {
 #Load necessary packages
-library(raster)
+  use_package("raster")
 #Read in file
 Fig = x
 #Check for an alpha (transparency) channel
