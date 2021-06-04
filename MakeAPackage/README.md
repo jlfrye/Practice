@@ -9,6 +9,7 @@ Methods.
 The challenges coming out from my GIS 2 project were three-fold. How to deal with RGBA files, how to branch the program depending on the .tif files dimensions (the number of color channels), and how to import packages into your own  r packages. The first was solved after doing some research on  matrix notation in R and adding an extra column into the notation fixed the issue. The second issue, required the use of an if expression, running the code twice with the decision being based on 
 
 if (dim(Fig[,,3])) {Code} else if (dim(Fig[,,4])) {Code).
+Note (code) is largely the same, with new names for the data involved to aviod crossed wires
 
 The third column of the of the dimensions denotes the number of color channels in the image, 3 for RGB and 4 for RGBA files. The third issue revolved around both how to import packages, and later which packages to import. In the original code I used “raster”, “sf”, “tidyverse”, and “tiff”. Tiff would need to be used by the user since trying to make the package capable of reading in the user’s data quickly became too thorny of an issue. Once I managed to learn the  proper use of the use_package function, troubleshooting began to see which packages were necessary. What ended up being the solution was to edit the namespace file directly, even though we were told not to do that, to ensure the import of packages. The persistent error 
 “Error in as.double(y) : cannot coerce type 'S4' to vector of type 'double.'”
