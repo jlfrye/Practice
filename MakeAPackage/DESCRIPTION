@@ -1,13 +1,10 @@
-Package: Water Detect
-Title: Detect Water
+Package: WaterDetect
+Title: DetectWater
 Version: 0.0.0.9000
-Authors@R: 
-    Joshua
-    Frye
-    aut, cre
-    jlfrye@uchicago.edu
+Authors@R: c(person("Joshua Frye", "Developer", role = c("aut", "cre"),
+                     email = "jlfrye@uchicago.edu"))
 Description: Detects water in images by color segmenting the raster matrix. Creates false color images where blue is green. Works on RGB and RGBA .tif files. ATTENTION! Requires tiff package to load .tif files into R
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
